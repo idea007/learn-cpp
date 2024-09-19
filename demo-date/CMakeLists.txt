@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.16.3)
 
-project(demo-logger CXX)
+project(demo-date CXX)
 
+set(CMAKE_CXX_STANDARD 11)
 
 file(GLOB_RECURSE SRC_FILES
     "${PROJECT_SOURCE_DIR}/src/*.c"

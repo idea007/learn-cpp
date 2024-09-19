@@ -1,32 +1,15 @@
 #include <iostream>
 
-#include "include/singleton_01.h"
+#include "include/log.h"
 
 
 
-class MyClass
-{
-public:
-    void Display()
-    {
-        std::cout << "MyClass instance: " << this << std::endl;
-    }
-
-    MyClass() {};
-    ~MyClass() {};
-
-private:
-};
 
 int main()
 {
+    static sylar::Logger::ptr g_logger = SYLAR_LOG_NAME("test");
 
-    // 获取单例实例并调用 Display 方法
-    Singleton01 &instance = Singleton01::GetInstance();
-    instance.Display();
-
-    Singleton01 &instance1 = Singleton01::GetInstance();
-    instance1.Display();
+    SYLAR_LOG_DEBUG(g_logger) << "hello sylar log";
 
     return 0;
 }

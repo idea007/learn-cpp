@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 3.16.3)
 
-project(demo-logger CXX)
+project(demo-timer CXX)
 
+set(CMAKE_CXX_STANDARD 11)
+
+add_definitions("-O3 -Wall -fPIC -Wno-unused-result")
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread -Wno-builtin-macro-redefined")
 
 file(GLOB_RECURSE SRC_FILES
     "${PROJECT_SOURCE_DIR}/src/*.c"
